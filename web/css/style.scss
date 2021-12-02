@@ -1,0 +1,416 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Nov 27, 2021, 4:44:32 PM
+    Author     : Jeet
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+$primary: #2e54f8;
+$darkPrimary: #1e42df;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    outline: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+.header {
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    background-color: white;
+    padding: 0px 25px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    .header-menu {
+        width: 100%;
+        height: 80px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            a {
+                h1 {
+                    span {
+                        font-family: "Brush Script MT", cursive;
+                        font-weight: 500;
+                        font-size: 3rem;
+                        color: black;
+                        &:first-child {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+        ul {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            grid-gap: 10px;
+            li {
+                list-style: none;
+                a {
+                    padding: 10px 15px;
+                    border-radius: 3px;
+                    letter-spacing: 0.3px;
+                    color: black;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    text-transform: capitalize;
+                    transition: 0.3s;
+                    &:hover {
+                        background-color: #2e54f8;
+                        color: white;
+                        box-shadow: #2e53f852 0px 2px 7px 0px;
+                    }
+                }
+            }
+            .active {
+                background-color: #2e54f8;
+                color: white;
+                box-shadow: #2e53f852 0px 2px 7px 0px;
+            }
+        }
+        .account {
+            a {
+                background-color: $primary;
+                box-shadow: #2e53f852 0px 2px 7px 0px;
+                color: white;
+                position: relative;
+                top: 0px;
+                transition: top 0.2s ease-in-out;
+                &:hover {
+                    top: -3px;
+                }
+            }
+        }
+    }
+}
+
+// -------------  home page --------------------
+
+.job-search-container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/images/slide.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .inner-box {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0.9) 40%, rgba(125, 185, 232, 0) 100%);
+        position: relative;
+        .search-box {
+            width: 85%;
+            margin: auto;
+            // border: 1px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .title {
+                background-color: $primary;
+                padding: 6px 10px;
+                color: white;
+                border-radius: 2px;
+                display: table;
+                font-size: 0.8rem;
+                font-weight: 400;
+            }
+            .heading {
+                margin-top: 5px;
+                max-width: 670px;
+                font-size: 3rem;
+                font-weight: 500;
+                line-height: 1.2;
+                span {
+                    color: $primary;
+                }
+            }
+            .input-box {
+                background-color: rgba(255, 255, 255, 0.925);
+                padding: 30px;
+                box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+                margin-top: 30px;
+                form {
+                    display: flex;
+                    grid-gap: 30px;
+                    justify-content: space-between;
+                    .input-filed {
+                        flex: 1;
+                        display: flex;
+                        align-items: center;
+                        border-bottom: 2px solid $primary;
+                        position: relative;
+                        input {
+                            display: block;
+                            flex: 1;
+                            padding: 13px 0px;
+                            font-weight: normal;
+                            font-size: 0.9rem;
+                            border: none;
+                            background: none;
+                            color: black;
+                            &::placeholder {
+                                color: rgb(41, 41, 41);
+                            }
+                        }
+                        .select-box {
+                            flex: 1;
+                            display: flex;
+                            .select {
+                                flex: 1;
+                                display: block;
+                                padding: 13px 0px;
+                                font-weight: normal;
+                                font-size: 0.9rem;
+                                color: black;
+                                cursor: default;
+                            }
+                        }
+                        .icon {
+                            display: block;
+                            padding: 10px;
+                            color: $primary;
+                        }
+                        .option {
+                            display: none;
+                            position: absolute;
+                            border-radius: 5px;
+                            top: 100%;
+                            width: 100%;
+                            max-height: 300px;
+                            overflow-y: auto;
+                            background-color: #fff;
+                            border: 1px solid rgb(207, 207, 207);
+                            margin-top: 2px;
+                            a {
+                                display: block;
+                                padding: 10px 20px;
+                                transition: 0.1s;
+                                color: black;
+                                &:hover {
+                                    background-color: $primary;
+                                    color: white;
+                                }
+                                &:nth-child(1) {
+                                    color: grey;
+                                    pointer-events: none;
+                                }
+                            }
+                            .selected {
+                                background-color: $primary;
+                                color: white;
+                            }
+                        }
+                    }
+                    .submit-btn {
+                        color: white;
+                        background: none;
+                        border: none;
+                        border-radius: 4px;
+                        padding: 15px 40px;
+                        background: $primary;
+                        font-size: 1.1rem;
+                        box-shadow: #2e53f87c 0px 2px 7px 0px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        &:hover {
+                            background-color: #1a3bca;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.category-container {
+    width: 85%;
+    margin: auto;
+    margin-top: 70px;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 25px;
+        .category-box {
+            background-color: #f7f9ff;
+            width: 270px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 10px 0 #2e53f82f;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            color: $primary;
+            padding: 20px;
+            transition: 0.4s ease-in-out;
+            &:hover {
+                background-color: $primary;
+                color: white;
+                transform: scale(105%);
+                a {
+                    color: white;
+                }
+            }
+            .icon {
+                font-size: 2.5rem;
+            }
+            .name {
+                font-weight: normal;
+                margin-top: 13px;
+                color: $primary;
+                font-size: 1.2rem;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .count {
+                font-weight: normal;
+                margin-top: 5px;
+            }
+        }
+    }
+    .category-btn {
+        display: table;
+        border-radius: 50px;
+        padding: 12px 22px;
+        margin: auto;
+        margin-top: 60px;
+        color: white;
+        background-color: $primary;
+        transition: 0.3s;
+        &:hover {
+            background-color: #1d40dd;
+        }
+    }
+}
+.login-page-container,
+.signup-page-container {
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+    width: 33%;
+    max-height: 94vh;
+    overflow: auto;
+    box-shadow: 0px 0px 10px 0px rgba(0, 24, 128, 0.18);
+    padding: 40px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    form {
+        .error {
+            color: red;
+            margin-top: 10px;
+            font-weight: 400;
+            border-radius: 3px;
+            font-size: 0.9rem;
+            padding: 9px 14px;
+            background-color: rgba(255, 151, 151, 0.212);
+        }
+        .title {
+            font-size: 1.75rem;
+            font-weight: 500;
+            padding: 15px 0px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 25px;
+                height: 3px;
+                border-radius: 10px;
+                background-color: $primary;
+                top: 100%;
+            }
+        }
+        .sub-title {
+            color: rgb(100, 100, 100);
+            padding: 25px 0px;
+        }
+        .input-filed {
+            input {
+                background: none;
+                border: none;
+                padding: 17px 15px;
+                width: 100%;
+                font-size: 0.95rem;
+                display: block;
+                border-radius: 5px;
+                margin-bottom: 23px;
+                box-shadow: 0px 0px 10px 0px rgba(0, 24, 128, 0.18);
+            }
+        }
+        .btn {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            .forgot-link {
+                display: block;
+                height: min-content;
+                padding: 0px 5px;
+                color: $primary;
+                font-size: 0.9rem;
+                transition: 0.3s;
+                &:hover {
+                    text-decoration: underline;
+                    color: black;
+                }
+            }
+            .login-btn,
+            .signup-submit {
+                background: none;
+                border: none;
+                padding: 13px 20px;
+                background-color: $primary;
+                color: white;
+                border-radius: 3px;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: 0.3s;
+                &:hover {
+                    background-color: $darkPrimary;
+                }
+            }
+        }
+    }
+    .signup-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        font-weight: 500;
+        border-radius: 3px;
+        color: white;
+        background-color: $primary;
+        transition: 0.3s;
+        &:hover {
+            background-color: $darkPrimary;
+        }
+    }
+    .divider {
+        width: 100%;
+        height: 3px;
+        margin: 30px 0px;
+        border-radius: 5px;
+        background-color: #e6e6e6;
+    }
+}
+.signup-page-container {
+    padding-bottom: 60px;
+}
