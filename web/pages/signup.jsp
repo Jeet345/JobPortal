@@ -9,6 +9,7 @@
     </head>
     <body>
 
+        <jsp:include page="../includes/header.jsp" />
 
         <!-- <%
             response.setHeader("Cache-Control", "no-cache");
@@ -47,7 +48,7 @@
                         out.println("<h5 class='error'>Error : "
                                 + session.getAttribute("error") + "</h5>");
                     }
-                %> 
+                %>
 
                 <div class="btn">
                     <a href="login" class="forgot-link">

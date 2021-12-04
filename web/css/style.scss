@@ -116,7 +116,6 @@ html {
         .search-box {
             width: 85%;
             margin: auto;
-            // border: 1px solid black;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -306,14 +305,13 @@ html {
     }
     width: 33%;
     max-height: 94vh;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
     overflow: auto;
     box-shadow: 0px 0px 10px 0px rgba(0, 24, 128, 0.18);
     padding: 40px;
     border-radius: 5px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     form {
         .error {
             color: red;
