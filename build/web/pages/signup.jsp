@@ -44,7 +44,8 @@
                     <input type="password" placeholder="Confirm Password" />
                 </div>
 
-                <% if (session.getAttribute("error") != null) {
+                <%
+                    if (session.getAttribute("error") != null) {
                         out.println("<h5 class='error'>Error : "
                                 + session.getAttribute("error") + "</h5>");
                     }

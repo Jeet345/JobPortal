@@ -22,6 +22,37 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>all jobs</servlet-name>
+        <jsp-file>/pages/job-all.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>all jobs</servlet-name>
+        <url-pattern>/pages/all-jobs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>company jobs</servlet-name>
+        <jsp-file>/pages/company-job.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>company jobs</servlet-name>
+        <url-pattern>/pages/company-job</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>category jobs</servlet-name>
+        <jsp-file>/pages/category-job.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>category jobs</servlet-name>
+        <url-pattern>/pages/category-job</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
         <servlet-name>signup</servlet-name>
         <jsp-file>/pages/signup.jsp</jsp-file>
     </servlet>

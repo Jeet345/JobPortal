@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ramva/Documents/NetBeansProjects/JobPortal/web/pages/login.jsp</file>
-            <file>file:/C:/Users/ramva/Documents/NetBeansProjects/JobPortal/web/pages/signup.jsp</file>
-            <file>file:/C:/Users/ramva/Documents/NetBeansProjects/JobPortal/src/java/account/signUpServlet.java</file>
+            <file>file:/C:/Users/ramva/Documents/NetBeansProjects/JobPortal/web/includes/job-search-header.jsp</file>
+            <file>file:/C:/Users/ramva/Documents/NetBeansProjects/JobPortal/web/pages/job-all.jsp</file>
+            <file>file:/C:/Users/ramva/Documents/NetBeansProjects/JobPortal/web/includes/header.jsp</file>
+            <file>file:/C:/Users/ramva/Documents/NetBeansProjects/JobPortal/web/pages/company-job.jsp</file>
         </group>
     </open-files>
 </project-private>
